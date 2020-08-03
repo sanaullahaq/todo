@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f23t4bkk&ovp9((kld*5mv@jp(^=grqip%alpvj6_xd^_8xr2#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['todowolist.herokuapp.com', '127.0.0.1']
 
@@ -114,7 +114,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/staticfiles/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static'),
+MEDIA_URL = '/mediafiles/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # the place where we will save our all media files in the project
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 LOGIN_URL = '/login'
 # if a user wants to create,view current todo, delete etc with out login this will redirect them to login first,
 #  what is url pattern of urls.py in line 25
