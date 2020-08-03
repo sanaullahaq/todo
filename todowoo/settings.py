@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'f23t4bkk&ovp9((kld*5mv@jp(^=grqip%alpvj6_xd^_8xr2#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['todowolist.herokuapp.com', '127.0.0.1',]
+ALLOWED_HOSTS = ['todowolist.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -113,9 +113,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/staticfiles/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static'),
-
 LOGIN_URL = '/login'
 # if a user wants to create,view current todo, delete etc with out login this will redirect them to login first,
 #  what is url pattern of urls.py in line 25
